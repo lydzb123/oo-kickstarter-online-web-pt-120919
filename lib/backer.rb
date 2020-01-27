@@ -7,9 +7,9 @@ class Backer
     @backed_projects = []
   end
 
-  def back (hoverboard)
-    @backed_projects << hoverboard
-    
+  def back_project (project)
+    @backed_projects << project
+    project.hoverboard.backers << self
   end
 
 end
